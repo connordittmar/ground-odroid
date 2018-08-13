@@ -1,0 +1,7 @@
+<launch>
+  <arg name="address" value="http://10.10.130.1:8000" />
+  <arg name="user" value="testuser" />
+  <arg name="password" value="testpass" />
+  <arg name="device" value="/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AL01NTBR-if00-port0" />
+  <node name="connections" pkg="groundserver" type="interop_node.py" args="$(arg address) $(arg user) $(arg password) $(arg device)" />
+</launch>
